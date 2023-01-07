@@ -1,0 +1,71 @@
+::ng-deep .label{
+    color: white;
+}
+mat-tab-group{
+    background-color: #1f1f1f;
+    color: white;
+    height: 600px;
+    letter-spacing: 1px;
+
+}
+.div-row-live{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-start;
+}
+.mat-card{
+    margin: 10px;
+    width: 31%;
+    margin-left: 18px;
+}
+.card-title-live{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    padding: 5%;
+    font-size: larger;
+}
+.div-row{
+    display: flex;
+    width: 100%;
+}
+.row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.span-live-name{
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    height: 32px;
+}
+.span-live-date{
+    display: flex; 
+    font-size: small;
+}
+.card-title-channel{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    letter-spacing: 0.5px;
+    padding: 0% 5% 5% 5%;
+}
+
+:root ::ng-deep .html5-video-player:not(.ytp-transparent), .html5-video-player.unstarted-mode, .html5-video-player.ad-showing, .html5-video-player.ended-mode, .html5-video-player.ytp-fullscreen {
+    background-color: #000;
+    border-radius: 22px;
+}
+.live-iframe{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 950px){
+    .mat-card{
+        margin: 3%;
+        width: 50%;
+    }
+}

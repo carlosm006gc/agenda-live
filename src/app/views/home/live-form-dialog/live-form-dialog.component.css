@@ -1,0 +1,31 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  
+}
+.dialog-title{
+  font-size: xx-large;
+  margin: 20px;
+}
+.example-full-width {
+  width: 100%;
+}
+.dialog-div-date{
+  display: flex;
+  justify-content: space-between;
+}
+.dialog-button{
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.dialog-button-add{
+  background-color: #114696 !important;
+  color: #ffffff !important;
+}
+
+:host ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled){
+  background-color: transparent;
+}

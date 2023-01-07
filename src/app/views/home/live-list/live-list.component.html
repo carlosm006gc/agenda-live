@@ -1,0 +1,78 @@
+<mat-tab-group animationDuration="1000ms" color="accent">
+  <mat-tab>
+    <mat-progress-bar *ngIf="!next" mode="indeterminate"></mat-progress-bar>
+    <ng-template mat-tab-label>
+        <div class="label">Próximas</div>
+      </ng-template>
+      <div *ngIf="next" class="div-row-live">
+        <ng-container *ngFor="let live of livesNext">
+          <mat-card class="mat-card">
+            <mat-card-title class="card-title-live"> 
+              <div class="div-row">
+                <p class="row">
+                  <span class="span-live-name">{{live.liveName}}</span>
+                  <mat-chip class="mat-chip-live"> 
+                    <div class="div-chip-date">
+                      <span class="span-live-date">
+                        {{live.liveDate | localDateTimePipe}}
+                      </span>
+                    </div>
+                  </mat-chip>
+                </p>
+              </div>
+            </mat-card-title>
+            <mat-card-title class="card-title-channel"> 
+              <div class="div-row">
+                <p class="row">
+                  <span>{{live.channelName}}</span>
+                </p>
+              </div>
+            </mat-card-title>
+            <mat-card-content>
+              <div>
+                <iframe class="live-iframe" [src]="live.urlSafe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </mat-card-content>
+          </mat-card>          
+        </ng-container>
+      </div>
+      </mat-tab>
+    <mat-tab>
+      <mat-progress-bar *ngIf="!previous" mode="indeterminate"></mat-progress-bar>
+    <ng-template mat-tab-label>
+      <div class="label">Realizadas</div>
+      </ng-template>
+      <div *ngIf="previous" class="div-row-live">
+        <ng-container *ngFor="let live of livesPrevious">
+          <mat-card class="mat-card">
+            <mat-card-title class="card-title-live"> 
+              <div class="div-row">
+                <p class="row">
+                  <span class="span-live-name">{{live.liveName}}</span>
+                  <mat-chip class="mat-chip-live"> 
+                    <div class="div-chip-date">
+                      <span class="span-live-date">
+                        {{live.liveDate | localDateTimePipe}}
+                      </span>
+                    </div>
+                  </mat-chip>
+                </p>
+              </div>
+            </mat-card-title>
+            <mat-card-title class="card-title-channel"> 
+              <div class="div-row">
+                <p class="row">
+                  <span>{{live.channelName}}</span>
+                </p>
+              </div>
+            </mat-card-title>
+            <mat-card-content>
+              <div>
+                <iframe class="live-iframe" [src]="live.urlSafe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </mat-card-content>
+          </mat-card>          
+        </ng-container>
+      </div>
+      </mat-tab>
+    </mat-tab-group>
