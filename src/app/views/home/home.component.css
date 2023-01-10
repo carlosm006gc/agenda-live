@@ -39,7 +39,7 @@ mat-toolbar{
     transition: .5s;
     background-size: 200% auto;
     box-shadow: 0 0 10px #eee;
-    color: rgba(6,57,84,1);
+    color: #6E48AA;
 }
 .button-home-add:hover{
     background-position: right center;
