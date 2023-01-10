@@ -26,6 +26,9 @@
                 <p class="row">
                   <span>{{live.channelName}}</span>
                 </p>
+                <div mat-dialog-actions>
+                  <button mat-button (click)="deleteLives(live.id)"color="warn">Excluir</button>
+                </div>
               </div>
             </mat-card-title>
             <mat-card-content>
@@ -65,7 +68,11 @@
                   <span>{{live.channelName}}</span>
                 </p>
               </div>
+              <div mat-dialog-actions>
+                <button mat-button (click)="deleteLives(live.id)"color="warn">Excluir</button>
+              </div>
             </mat-card-title>
+
             <mat-card-content>
               <div>
                 <iframe class="live-iframe" [src]="live.urlSafe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,12 +1,13 @@
 ::ng-deep .label{
-    color: white;
+    color: #ffffff;
 }
 mat-tab-group{
-    background-color: #1f1f1f;
-    color: white;
-    height: 600px;
+    background-image: linear-gradient(to right, #9D50BB 0%, #6E48AA 51%, #9D50BB 100%);
+    color: #ffffff;
+    height: 100vh;
     letter-spacing: 1px;
-
+    background-size: 200% auto;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .div-row-live{
     display: flex;
@@ -62,6 +63,21 @@ mat-tab-group{
     border-radius: 10px;
     height: 100%;
     width: 100%;
+}
+:host ::ng-deep .mat-mdc-tab-header {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 120px;
+}
+:host ::ng-deep .mat-mdc-card {
+    position: relative;
+    border-radius: var(--mdc-elevated-card-container-shape, var(--mdc-shape-medium, 20px));
+    background-color: #ffffffbf;
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--mdc-elevated-card-container-color, transparent);
 }
 @media screen and (max-width: 950px){
     .mat-card{

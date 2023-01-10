@@ -28,4 +28,7 @@ export class LiveService {
   public postLives(live: any): Observable<Live>{
     return this.httpClient.post<any>(this.apiUrl, live, this.httpOptions);
   }
+  public deleteLive(id: string){
+    return this.httpClient.delete("http://localhost:8080/lives/".concat(id));
+  }
 }

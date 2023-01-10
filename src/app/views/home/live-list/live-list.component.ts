@@ -17,7 +17,7 @@ export class LiveListComponent implements OnInit {
   previous: boolean = false;
   url: string = '';
   urlSafe: SafeResourceUrl;
-
+  lives: Live[];
 
   constructor(
     private rest: LiveService,
@@ -27,7 +27,6 @@ export class LiveListComponent implements OnInit {
   ngOnInit() {
    this.getLives();
   }
-
   getLives(){
     this.rest.getLivesWithFlag('next').subscribe(data => {
       this.livesNext = data.content;
@@ -44,6 +43,10 @@ export class LiveListComponent implements OnInit {
       });
       this.previous = true;
     });
+  }
+  deleteLives(id: string){
+    this.rest.deleteLive(id).subscribe(result => {});
+    window.location.reload();
   }
 
 }
