@@ -9,7 +9,7 @@ import { ResponsePageable } from '../model/responsePageable.model';
 })
 export class LiveService {
 
-  apiUrl = 'http://localhost:8080/lives';
+  apiUrl = 'https://agenda-live-backend.herokuapp.com/lives';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -29,6 +29,6 @@ export class LiveService {
     return this.httpClient.post<any>(this.apiUrl, live, this.httpOptions);
   }
   public deleteLive(id: string){
-    return this.httpClient.delete("http://localhost:8080/lives/".concat(id));
+    return this.httpClient.delete("https://agenda-live-backend.herokuapp.com/lives/".concat(id));
   }
 }
