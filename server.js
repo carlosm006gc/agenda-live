@@ -3,7 +3,7 @@ const path = require('path')
 
 const app = express();
 
-const appName = 'primeiro-projeto'
+const appName = 'agendalive'
 
 app.use(express.static(__dirname + `/dist/${appName}`))
 
